@@ -4,11 +4,5 @@
   "question": "Inject your own shell command through the image size parameter and run it on the server (OS command injection).",
   "category": "WEB",
   "difficulty": 1,
-  "evidence_kind": "SECRET",
-  "capabilities": [
-    "command-injection",
-    "remote-code-execution",
-    "imagemagick",
-    "injection"
-  ]
+  "evidence_kind": "SECRET"
 }
