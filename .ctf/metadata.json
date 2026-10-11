@@ -1,7 +1,7 @@
 {
   "title": "OWASP SKF Command Injection",
   "description": "A Flask page that resizes an image by running ImageMagick's convert through os.system, with the size taken from the form.",
-  "question": "Inject your own shell command through the image size parameter and run it on the server (OS command injection).",
+  "question": "Inject your own shell command through the image size parameter (OS command injection) and read /ctf/flag on the server.",
   "category": "WEB",
   "difficulty": 1,
   "evidence_kind": "SECRET"

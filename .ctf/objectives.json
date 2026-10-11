@@ -1,0 +1,54 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Read the flag",
+      "prompt": "Get command execution on the image resizer and read /ctf/flag.",
+      "check": {
+        "evidence": "SECRET",
+        "format": "FLAG{%s}"
+      },
+      "dev": "FLAG{dev-skf-cmd}",
+      "hints": [
+        "The chosen size ends up inside a shell command line built by the application.",
+        "Read about OS command injection and shell command separators in the OWASP testing guide."
+      ],
+      "steps": [
+        {
+          "key": "tool",
+          "title": "Identify the tool",
+          "prompt": "Which image tool does the server call to resize the picture?",
+          "check": {
+            "answer": [
+              "imagemagick",
+              "convert",
+              "imagemagick convert"
+            ]
+          }
+        },
+        {
+          "key": "param",
+          "title": "Find the input",
+          "prompt": "Which form field reaches the shell command? (field name)",
+          "check": {
+            "answer": [
+              "size"
+            ]
+          }
+        },
+        {
+          "key": "class",
+          "title": "Name the weakness",
+          "prompt": "What class of vulnerability is this?",
+          "check": {
+            "answer": [
+              "command injection",
+              "os command injection",
+              "shell injection"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
