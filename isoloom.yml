@@ -32,7 +32,7 @@ machines:
     app:
       build:
         context: app
-        dockerfile: build/web/Dockerfile
+        dockerfile: app/Dockerfile.lab
 
 checks:
   - name: the lab answers
